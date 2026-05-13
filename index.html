@@ -1,142 +1,150 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tizona - Ropa y Banderas</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: #f5f5f5;
-    }
-
-    header {
-      background: url('https://images.unsplash.com/photo-1520975922284-3c6b8f0c3f3a') center/cover no-repeat;
-      height: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
-
-    header h1 {
-      font-size: 60px;
-      margin: 0;
-      letter-spacing: 4px;
-    }
-
-    header p {
-      font-size: 20px;
-      opacity: 0.9;
-    }
-
-    nav {
-      background: #111;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #f5f5f5;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .container {
-      padding: 40px;
-      text-align: center;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #333;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: darkred;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      text-align: center;
-      background: #111;
-      font-size: 14px;
-      color: #aaa;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tizona - Tienda Online</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #111;
+  position: sticky;
+  top: 0;
+}
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  opacity: 0.8;
+}
+nav a:hover {
+  opacity: 1;
+}
+.hero {
+  height: 70vh;
+  background: url('https://images.unsplash.com/photo-1520975928316-56c6a1b2b7c8?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 60px;
+  margin: 0;
+}
+.hero p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #c9a227;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+.section {
+  padding: 60px 40px;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.product {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+.product h3 {
+  margin: 10px 0 5px;
+}
+.price {
+  color: #c9a227;
+  font-weight: bold;
+}
+.buy {
+  margin-top: 10px;
+  padding: 10px;
+  background: #c9a227;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  margin-top: 40px;
+}
+</style>
 </head>
-
-<body>
-
-  <header style="background: url('img/portada.jpg') center/cover no-repeat;">
-  <h1>TIZONA</h1>
-  <p>Honor • Tradición • Fuerza</p>
-</header>
-
+<body><header>
+  <div class="logo">TIZONA</div>
   <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Tienda</a>
-    <a href="#">Contacto</a>
+    <a href="#inicio">Inicio</a>
+    <a href="#tienda">Tienda</a>
+    <a href="#contacto">Contacto</a>
   </nav>
+</header><section class="hero" id="inicio">
+  <h1>TIZONA</h1>
+  <p>Tradición · Honor · Estilo</p>
+  <a class="btn" href="#tienda">Ver tienda</a>
+</section><section class="section" id="tienda">
+  <h2>Productos destacados</h2>
+  <div class="products"><div class="product">
+  <img src="https://images.unsplash.com/photo-1520975918310-5a5a1f0f7c6d?auto=format&fit=crop&w=600&q=80" />
+  <h3>Camiseta Tizona</h3>
+  <p class="price">19,99€</p>
+  <button class="buy">Comprar</button>
+</div>
 
-  <div class="container">
-    <h2>Productos destacados</h2>
+<div class="product">
+  <img src="https://images.unsplash.com/photo-1520975682031-a1b2c3d4e5f6?auto=format&fit=crop&w=600&q=80" />
+  <h3>Banderas Históricas</h3>
+  <p class="price">14,99€</p>
+  <button class="buy">Comprar</button>
+</div>
 
-    <div class="grid">
+<div class="product">
+  <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" />
+  <h3>Sudadera Tizona</h3>
+  <p class="price">29,99€</p>
+  <button class="buy">Comprar</button>
+</div>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1520975693416-35a5b8f7b1b6" alt="">
-        <h3>Camiseta Tizona</h3>
-        <p>Diseño clásico con estética templaria.</p>
-        <a class="btn" href="#">Comprar</a>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1602810318383-5f5b2b4f0b0a" alt="">
-        <h3>Bandera Cruz Borgoña</h3>
-        <p>Ideal para eventos y decoración.</p>
-        <a class="btn" href="#">Comprar</a>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1520975922284-3c6b8f0c3f3a" alt="">
-        <h3>Sudadera Tizona</h3>
-        <p>Comodidad con estilo histórico.</p>
-        <a class="btn" href="#">Comprar</a>
-      </div>
-
-    </div>
   </div>
-
-  <footer>
-    © 2026 Tizona - Todos los derechos reservados
-  </footer>
-
-</body>
+</section><section class="section" id="contacto">
+  <h2>Contacto</h2>
+  <p style="text-align:center;">Escríbenos a: contacto@tizona.com</p>
+</section><footer>
+  © 2026 Tizona - Todos los derechos reservados
+</footer></body>
 </html>
