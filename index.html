@@ -1,17 +1,142 @@
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975958225-7a1f6c2f8d3b?auto=format&fit=crop&w=800&q=80">
-<h2>Camiseta Cruz de Borgoña</h2>
-<p>24,90€</p>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tizona - Ropa y Banderas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+    }
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=800&q=80">
-<h2>Sudadera Tercios</h2>
-<p>39,90€</p>
-</div>
+    header {
+      background: url('https://images.unsplash.com/photo-1520975922284-3c6b8f0c3f3a') center/cover no-repeat;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975704133-1b2c1d0f7c4a?auto=format&fit=crop&w=800&q=80">
-<h2>Bandera Histórica</h2>
-<p>19,90€</p>
-</div>
+    header h1 {
+      font-size: 60px;
+      margin: 0;
+      letter-spacing: 4px;
+    }
+
+    header p {
+      font-size: 20px;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: #111;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f5f5f5;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #333;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: darkred;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>TIZONA</h1>
+    <p>Ropa • Banderas • Tradición y Honor</p>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Tienda</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <div class="container">
+    <h2>Productos destacados</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975693416-35a5b8f7b1b6" alt="">
+        <h3>Camiseta Tizona</h3>
+        <p>Diseño clásico con estética templaria.</p>
+        <a class="btn" href="#">Comprar</a>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1602810318383-5f5b2b4f0b0a" alt="">
+        <h3>Bandera Cruz Borgoña</h3>
+        <p>Ideal para eventos y decoración.</p>
+        <a class="btn" href="#">Comprar</a>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975922284-3c6b8f0c3f3a" alt="">
+        <h3>Sudadera Tizona</h3>
+        <p>Comodidad con estilo histórico.</p>
+        <a class="btn" href="#">Comprar</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Tizona - Todos los derechos reservados
+  </footer>
+
+</body>
+</html>
