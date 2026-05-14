@@ -1,150 +1,190 @@
-  <!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tizona - Tienda Online</title>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
-  color: white;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #111;
-  position: sticky;
-  top: 0;
-}
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  opacity: 0.8;
-}
-nav a:hover {
-  opacity: 1;
-}
-.hero {
-  height: 70vh;
-  background: url('https://images.unsplash.com/photo-1520975928316-56c6a1b2b7c8?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.hero h1 {
-  font-size: 60px;
-  margin: 0;
-}
-.hero p {
-  font-size: 20px;
-  margin-top: 10px;
-}
-.btn {
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: #c9a227;
-  color: black;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-}
-.section {
-  padding: 60px 40px;
-}
-.section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-.product {
-  background: #1a1a1a;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-}
-.product img {
-  width: 100%;
-  border-radius: 10px;
-}
-.product h3 {
-  margin: 10px 0 5px;
-}
-.price {
-  color: #c9a227;
-  font-weight: bold;
-}
-.buy {
-  margin-top: 10px;
-  padding: 10px;
-  background: #c9a227;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  font-weight: bold;
-}
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #111;
-  margin-top: 40px;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tizona</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0b0b0b;
+      color:white;
+    }
+
+    header{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+      url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:80px;
+      letter-spacing:8px;
+      text-transform:uppercase;
+    }
+
+    .hero p{
+      margin-top:20px;
+      font-size:22px;
+      color:#ddd;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:15px 35px;
+      background:#b8860b;
+      color:white;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:bold;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:#d4a514;
+    }
+
+    section{
+      padding:80px 20px;
+    }
+
+    .title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:50px;
+      text-transform:uppercase;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .card{
+      background:#161616;
+      border-radius:20px;
+      overflow:hidden;
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      font-size:24px;
+    }
+
+    .price{
+      color:#d4a514;
+      font-size:20px;
+      margin-bottom:15px;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      background:black;
+      color:#888;
+    }
+  </style>
 </head>
-<body><header>
-  <div class="logo">TIZONA</div>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#tienda">Tienda</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header><section class="hero" id="inicio">
-  <h1>TIZONA</h1>
-  <p>Tradición · Honor · Estilo</p>
-  <a class="btn" href="#tienda">Ver tienda</a>
-</section><section class="section" id="tienda">
-  <h2>Productos destacados</h2>
-  <div class="products"><div class="product">
-  <img src="https://images.unsplash.com/photo-1520975918310-5a5a1f0f7c6d?auto=format&fit=crop&w=600&q=80" />
-  <h3>Camiseta Tizona</h3>
-  <p class="price">19,99€</p>
-  <button class="buy">Comprar</button>
-</div>
 
-<div class="product">
-  <img src="https://images.unsplash.com/photo-1520975682031-a1b2c3d4e5f6?auto=format&fit=crop&w=600&q=80" />
-  <h3>Banderas Históricas</h3>
-  <p class="price">14,99€</p>
-  <button class="buy">Comprar</button>
-</div>
+<body>
 
-<div class="product">
-  <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" />
-  <h3>Sudadera Tizona</h3>
-  <p class="price">29,99€</p>
-  <button class="buy">Comprar</button>
-</div>
+<header>
+  <div class="hero">
+    <h1>Tizona</h1>
+    <p>Ropa · Banderas · Historia · Tradición</p>
+
+    <a href="#tienda" class="btn">
+      Entrar a la tienda
+    </a>
+  </div>
+</header>
+
+<section id="tienda">
+
+  <h2 class="title">Colección Destacada</h2>
+
+  <div class="products">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-content">
+        <h3>Camiseta Cruz de Borgoña</h3>
+        <div class="price">24,99€</div>
+
+        <a href="#" class="btn">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-content">
+        <h3>Sudadera Templaria</h3>
+        <div class="price">44,99€</div>
+
+        <a href="#" class="btn">
+          Comprar
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1520342868574-5fa3804e551c?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="card-content">
+        <h3>Bandera Histórica</h3>
+        <div class="price">19,99€</div>
+
+        <a href="#" class="btn">
+          Comprar
+        </a>
+      </div>
+    </div>
 
   </div>
-</section><section class="section" id="contacto">
-  <h2>Contacto</h2>
-  <p style="text-align:center;">Escríbenos a: contacto@tizona.com</p>
-</section><footer>
-  © 2026 Tizona - Todos los derechos reservados
-</footer></body>
+
+</section>
+
+<footer>
+  © 2026 Tizona — Honor y tradición
+</footer>
+
+</body>
 </html>
