@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111;
+  border-bottom: 2px solid #b30000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url('img/hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border: 1px solid #b30000;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #b30000;
+  color: white;
+  text-decoration: none;
+}
+
+/* SECCIONES */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+h2 {
+  color: #d4af37;
+}
+
+/* GRID CATEGORÍAS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #111;
+  padding: 20px;
+  border: 1px solid #b30000;
+}
+
+/* PRODUCTOS */
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background: #111;
+  padding: 15px;
+  border: 1px solid #333;
+}
+
+button {
+  background: #b30000;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* IDENTIDAD */
+.identity {
+  background: #111;
+  border-top: 2px solid #b30000;
+  border-bottom: 2px solid #b30000;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #777;
+}
