@@ -1,189 +1,332 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tizona</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tizona</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 
-    body{
-      background:#0b0b0b;
-      color:white;
-    }
+<style>
 
-    header{
-      height:100vh;
-      background:
-      linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
-      url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?q=80&w=1600&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:20px;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    .hero h1{
-      font-size:80px;
-      letter-spacing:8px;
-      text-transform:uppercase;
-    }
+body{
+background:#050505;
+color:white;
+font-family:'Cinzel', serif;
+}
 
-    .hero p{
-      margin-top:20px;
-      font-size:22px;
-      color:#ddd;
-    }
+.hero{
+height:520px;
+background:
+linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
 
-    .btn{
-      display:inline-block;
-      margin-top:35px;
-      padding:15px 35px;
-      background:#b8860b;
-      color:white;
-      text-decoration:none;
-      border-radius:12px;
-      font-weight:bold;
-      transition:.3s;
-    }
+.hero-content h1{
+font-size:90px;
+letter-spacing:10px;
+}
 
-    .btn:hover{
-      background:#d4a514;
-    }
+.hero-content p{
+margin-top:15px;
+font-size:24px;
+letter-spacing:4px;
+color:#ddd;
+}
 
-    section{
-      padding:80px 20px;
-    }
+.hero-content h2{
+margin-top:40px;
+font-size:36px;
+color:white;
+}
 
-    .title{
-      text-align:center;
-      font-size:42px;
-      margin-bottom:50px;
-      text-transform:uppercase;
-    }
+.nav{
+background:#090909;
+border-top:1px solid #333;
+border-bottom:1px solid #333;
+display:flex;
+justify-content:center;
+gap:80px;
+padding:22px;
+}
 
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-      max-width:1200px;
-      margin:auto;
-    }
+.nav a{
+color:white;
+text-decoration:none;
+font-size:18px;
+transition:.3s;
+}
 
-    .card{
-      background:#161616;
-      border-radius:20px;
-      overflow:hidden;
-      transition:.3s;
-    }
+.nav a:hover{
+color:#b31313;
+}
 
-    .card:hover{
-      transform:translateY(-8px);
-    }
+.section-title{
+text-align:center;
+font-size:44px;
+margin:70px 0;
+letter-spacing:4px;
+}
 
-    .card img{
-      width:100%;
-      height:320px;
-      object-fit:cover;
-    }
+.products{
+max-width:1400px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+padding:20px;
+}
 
-    .card-content{
-      padding:20px;
-    }
+.card{
+background:#0d0d0d;
+border:1px solid #3a2a2a;
+transition:.3s;
+}
 
-    .card h3{
-      margin-bottom:10px;
-      font-size:24px;
-    }
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(180,20,20,.35);
+}
 
-    .price{
-      color:#d4a514;
-      font-size:20px;
-      margin-bottom:15px;
-    }
+.card img{
+width:100%;
+height:360px;
+object-fit:cover;
+display:block;
+}
 
-    footer{
-      text-align:center;
-      padding:40px;
-      background:black;
-      color:#888;
-    }
-  </style>
+.card-content{
+padding:25px;
+text-align:center;
+}
+
+.card h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.price{
+font-size:34px;
+color:#b31313;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+background:#8b1111;
+padding:14px 28px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#b31313;
+}
+
+.features{
+max-width:1400px;
+margin:80px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+padding:20px;
+text-align:center;
+}
+
+.feature{
+border-top:2px solid #8b1111;
+padding-top:20px;
+}
+
+.feature h4{
+font-size:24px;
+margin-bottom:10px;
+}
+
+footer{
+background:black;
+padding:40px;
+text-align:center;
+color:#777;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+.hero{
+height:420px;
+}
+
+.hero-content h1{
+font-size:52px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+.hero-content h2{
+font-size:22px;
+}
+
+.nav{
+gap:25px;
+flex-wrap:wrap;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="hero">
-    <h1>Tizona</h1>
-    <p>Ropa · Banderas · Historia · Tradición</p>
+<section class="hero">
 
-    <a href="#tienda" class="btn">
-      Entrar a la tienda
-    </a>
-  </div>
-</header>
+<div class="hero-content">
 
-<section id="tienda">
+<h1>TIZONA</h1>
 
-  <h2 class="title">Colección Destacada</h2>
+<p>HONOR • TRADICIÓN • FUERZA</p>
 
-  <div class="products">
+<h2>ROPA Y BANDERAS TEMPLARIAS</h2>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+</div>
 
-      <div class="card-content">
-        <h3>Camiseta Cruz de Borgoña</h3>
-        <div class="price">24,99€</div>
+</section>
 
-        <a href="#" class="btn">
-          Comprar
-        </a>
-      </div>
-    </div>
+<nav class="nav">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop">
+<a href="#">INICIO</a>
+<a href="#">TIENDA</a>
+<a href="#">SOBRE NOSOTROS</a>
+<a href="#">CONTACTO</a>
 
-      <div class="card-content">
-        <h3>Sudadera Templaria</h3>
-        <div class="price">44,99€</div>
+</nav>
 
-        <a href="#" class="btn">
-          Comprar
-        </a>
-      </div>
-    </div>
+<h2 class="section-title">
+PRODUCTOS DESTACADOS
+</h2>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1520342868574-5fa3804e551c?q=80&w=1200&auto=format&fit=crop">
+<section class="products">
 
-      <div class="card-content">
-        <h3>Bandera Histórica</h3>
-        <div class="price">19,99€</div>
+<div class="card">
 
-        <a href="#" class="btn">
-          Comprar
-        </a>
-      </div>
-    </div>
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
 
-  </div>
+<div class="card-content">
+
+<h3>CAMISETA TIZONA</h3>
+
+<div class="price">19,99 €</div>
+
+<a href="#" class="btn">
+VER PRODUCTO
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1520342868574-5fa3804e551c?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>BANDERA TEMPLARIA</h3>
+
+<div class="price">24,99 €</div>
+
+<a href="#" class="btn">
+VER PRODUCTO
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>SUDADERA TIZONA</h3>
+
+<div class="price">34,99 €</div>
+
+<a href="#" class="btn">
+VER PRODUCTO
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>TAZA TEMPLARIA</h3>
+
+<div class="price">12,99 €</div>
+
+<a href="#" class="btn">
+VER PRODUCTO
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<h4>ENVÍOS RÁPIDOS</h4>
+<p>24/48 HORAS</p>
+</div>
+
+<div class="feature">
+<h4>PAGO SEGURO</h4>
+<p>100% PROTEGIDO</p>
+</div>
+
+<div class="feature">
+<h4>CALIDAD GARANTIZADA</h4>
+<p>PRODUCTOS EXCLUSIVOS</p>
+</div>
+
+<div class="feature">
+<h4>ATENCIÓN AL CLIENTE</h4>
+<p>SIEMPRE A TU SERVICIO</p>
+</div>
 
 </section>
 
 <footer>
-  © 2026 Tizona — Honor y tradición
+
+© 2026 TIZONA — HONOR Y TRADICIÓN
+
 </footer>
 
 </body>
